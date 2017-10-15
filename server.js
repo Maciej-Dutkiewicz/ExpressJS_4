@@ -13,7 +13,7 @@ app.get('/auth/google', function(req,res) {
 });
 
 app.get('/login', function(req,res) {
-	res.render('login.pug');
+	res.render('login.pug', {name: req.query.username, pass: req.query.password});
 });
 
 app.listen(3000);
